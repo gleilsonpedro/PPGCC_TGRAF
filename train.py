@@ -14,15 +14,16 @@ num_classes = len(set(data.y.tolist()))
 
 # Escolher modelo
 if MODEL_NAME == "GCN":
-    model = GCN(num_features, 16, num_classes)
+    model = GCN(num_features, HIDDEN_DIM, num_classes)
 elif MODEL_NAME == "GAT":
-    model = GAT(num_features, 16, num_classes)
+    model = GAT(num_features, HIDDEN_DIM, num_classes)
 elif MODEL_NAME == "SGC":
-    model = SGC(num_features, num_classes)
+    model = SGC(num_features, num_classes)  # Sem HIDDEN_DIM
 elif MODEL_NAME == "MPNN":
-    model = MPNN(num_features, num_classes)
+    model = MPNN(num_features, num_classes)  # Sem HIDDEN_DIM
 else:
     raise ValueError("Modelo inválido! Escolha entre 'GCN', 'GAT', 'SGC' ou 'MPNN'.")
+
 
 # Configurar otimizador
 optimizer = torch.optim.Adam(model.parameters(), lr=0.01, weight_decay=5e-4)
