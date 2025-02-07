@@ -29,6 +29,12 @@ As classes representam a categoria temática do artigo.
 🔗 Arestas: 4.732
 🔤 Atributos por nó: 3.703
 🎯 Classes: 6 (categorias de pesquisa, como IA, Banco de Dados, etc.)
+            Agentes 🤖
+            Aprendizado de Máquina 📊
+            Redes Neurais 🧠
+            Banco de Dados 💾
+            Sistemas Operacionais 🖥️
+            Teoria 📏
 📌 Descrição: O Citeseer é um dataset mais difícil do que o Cora porque tem menos conexões por nó e um maior número de atributos. Também representa um grafo de citações acadêmicas.
 
 3️⃣ PubMed
@@ -36,6 +42,9 @@ As classes representam a categoria temática do artigo.
 🔗 Arestas: 44.324
 🔤 Atributos por nó: 500
 🎯 Classes: 3 (tipos de doenças relacionadas ao diabetes)
+            Diabetes Tipo 1 🏥
+            Diabetes Tipo 2 🩸
+            Diabetes com complicações secundárias ⚠️
 📌 Descrição: O dataset PubMed contém artigos médicos relacionados a diabetes classificados em 3 categorias. É significativamente maior que Cora e Citeseer.
 
 As arquiteturas testadas são:
@@ -54,8 +63,10 @@ Os experimentos são conduzidos para avaliar o desempenho dessas arquiteturas em
 ```
 📂 PPGCC_TGRAF
 │── 📂 utils
+|   |── __init__.py    
 │   ├── data_loader.py  # Carrega os datasets
 │── 📂 modelo
+│   │── __init__.py     # arquivo com configuração dos datasets
 │   ├── gcn.py          # Implementação do GCN
 │   ├── gat.py          # Implementação do GAT
 │   ├── sgc.py          # Implementação do SGC
