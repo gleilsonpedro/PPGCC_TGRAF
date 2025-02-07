@@ -12,6 +12,9 @@ data = load_dataset(DATASET_NAME)
 num_features = data.x.shape[1]
 num_classes = len(set(data.y.tolist()))
 
+# Definir dimensão oculta
+HIDDEN_DIM = 16  # Dimensão intermediária para modelos que usam
+
 # Escolher modelo
 if MODEL_NAME == "GCN":
     model = GCN(num_features, HIDDEN_DIM, num_classes)

@@ -32,7 +32,7 @@ for dataset_name in DATASETS:
     
     for model_name, ModelClass in MODELS.items():
         # Inicializar modelo
-        if model_name == "SGC":
+        if model_name in ["MPNN","SGC"]:
             model = ModelClass(num_features, num_classes)  # SGC não tem hidden layer
         else:
             model = ModelClass(num_features, HIDDEN_DIM, num_classes)

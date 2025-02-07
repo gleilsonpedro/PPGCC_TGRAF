@@ -1,0 +1,13 @@
+Dataset,Modelo,Acurácia
+Cora,GCN,0.8
+Cora,GAT,0.725
+Cora,SGC,0.801
+Cora,MPNN,0.748
+Citeseer,GCN,0.686
+Citeseer,GAT,0.681
+Citeseer,SGC,0.663
+Citeseer,MPNN,0.575
+PubMed,GCN,0.788
+PubMed,GAT,0.763
+PubMed,SGC,0.78
+PubMed,MPNN,0.7
