@@ -50,6 +50,61 @@ As classes representam a categoria temática do artigo.
 As arquiteturas testadas são:
 
 - **GCN (Graph Convolutional Network)**
+
+# 📌 Graph Convolutional Network (GCN)
+
+## 🔍 O que é o GCN?
+O **Graph Convolutional Network (GCN)** é uma rede neural projetada para trabalhar com **grafos**, permitindo que os nós aprendam representações baseadas na estrutura do grafo. Foi introduzido por **Thomas Kipf e Max Welling** em 2017 e é amplamente utilizado para tarefas como **classificação de nós, predição de links e aprendizado de representações em grafos**.
+
+---
+
+## 🚀 Como o GCN funciona?
+A ideia central do GCN é permitir que cada nó combine suas **próprias features** com as dos seus **vizinhos**, extraindo informações estruturais ao longo de várias camadas da rede.
+
+A atualização dos nós é definida pela equação:
+$$
+H^{(l+1)} = \sigma \left( \tilde{D}^{-1/2} \tilde{A} \tilde{D}^{-1/2} H^{(l)} W^{(l)} \right)
+$$
+
+
+Dessa forma, a cada camada, os nós acumulam informações de seus vizinhos de forma iterativa.
+
+---
+
+## 🔗 Fluxo de um GCN
+1. **Entrada:**
+   - Um grafo representado pela matriz de adjacência \( A \);
+   - Uma matriz de features \( X \), onde cada linha corresponde a um nó.
+2. **Propagação:**
+   - Cada nó agrega informações dos seus vizinhos.
+3. **Saída:**
+   - Embeddings finais dos nós, que podem ser usadas para classificação ou outras tarefas.
+
+---
+
+## 📌 Vantagens do GCN
+✔️ Captura **estruturas** e **relações** do grafo.  
+✔️ É eficiente devido à **aproximação espectral**.  
+✔️ Funciona bem com **dados esparsos**.  
+
+## ⚠️ Limitações do GCN
+❌ Sofre com **oversmoothing** (as representações dos nós se tornam muito semelhantes em camadas profundas).  
+❌ Tem dificuldade em capturar **conectividades complexas** (exemplo: redes sociais densas).  
+
+---
+
+## 🛠 Implementação no Projeto
+No seu projeto, o GCN está implementado na classe `GCN` dentro do arquivo `modelo.py`. Ele recebe:
+- O **número de features** dos nós (entrada);
+- A **dimensão oculta** para aprendizado intermedário;
+- O **número de classes** para classificação final.
+
+O modelo realiza **convoluções sobre o grafo**, propagando informações entre nós vizinhos para gerar predições mais precisas.
+
+Se quiser explorar outras arquiteturas (GAT, SGC, MPNN), basta conferir os respectivos arquivos no projeto! 🚀
+
+
+
 - **GAT (Graph Attention Network)**
 - **SGC (Simplifying Graph Convolution)**
 - **MPNN (Message Passing Neural Network)**
