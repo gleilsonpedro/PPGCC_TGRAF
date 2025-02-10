@@ -3,3 +3,4 @@ torch-geometric
 numpy
 scikit-learn
 matplotlib
+pandas
