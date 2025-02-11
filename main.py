@@ -1,5 +1,6 @@
 import torch
 import torch.nn.functional as F
+import time
 from utils.data_loader import load_dataset
 from modelo import GCN, GAT, SGC, MPNN
 import pandas as pd
@@ -32,13 +33,13 @@ for dataset_name in DATASETS:
     
     for model_name, ModelClass in MODELS.items():
         # Inicializar modelo
-        if model_name in ["MPNN","SGC"]:
+        if model_name in ["MPNN", "SGC"]:
             model = ModelClass(num_features, num_classes)  # SGC não tem hidden layer
         else:
             model = ModelClass(num_features, HIDDEN_DIM, num_classes)
 
         optimizer = torch.optim.Adam(model.parameters(), lr=LR, weight_decay=WEIGHT_DECAY)
-        
+
         def train():
             model.train()
             optimizer.zero_grad()
@@ -57,6 +58,8 @@ for dataset_name in DATASETS:
             return acc
         
         print(f"Treinando {model_name} no dataset {dataset_name}...")
+        start_time = time.time()  # Inicia contagem de tempo
+        
         for epoch in range(EPOCHS):
             loss = train()
             if epoch % 10 == 0:
@@ -65,10 +68,12 @@ for dataset_name in DATASETS:
         
         # Avaliação final
         final_acc = evaluate()
-        results.append([dataset_name, model_name, final_acc])
+        total_time = time.time() - start_time  # Tempo total de execução
+        
+        results.append([dataset_name, model_name, final_acc, total_time])
 
 # Salvar os resultados em um DataFrame
-results_df = pd.DataFrame(results, columns=["Dataset", "Modelo", "Acurácia"])
+results_df = pd.DataFrame(results, columns=["Dataset", "Modelo", "Acurácia", "Tempo (s)"])
 print(results_df)
 
 # Salvar em CSV para análise posterior
