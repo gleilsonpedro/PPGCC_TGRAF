@@ -10,18 +10,18 @@ As arestas representam citações entre artigos.
 Os atributos dos nós representam informações sobre os artigos (exemplo: palavras-chave em uma representação de bag-of-words).
 As classes representam a categoria temática do artigo.
 
-1️⃣ Cora
-📊 Nós: 2.708 
-🔗 Arestas: 5.429
-🔤 Atributos por nó: 1.433
-🎯 Classes: 7 
-            Redes Neurais 🧠
-            Aprendizado de Máquina 🤖
-            Recuperação de Informação 🔎
-            Visão Computacional 👁️
-            Processamento de Linguagem Natural 🗣️
-            Sistemas Operacionais 🖥️
-            Teoria da Computação 📏
+1️⃣ Cora\
+📊 Nós: 2.708\ 
+🔗 Arestas: 5.429\
+🔤 Atributos por nó: 1.433\
+🎯 Classes: 7\ 
+            *Redes Neurais 🧠
+            *Aprendizado de Máquina 🤖
+            *Recuperação de Informação 🔎
+            *Visão Computacional 👁️
+            *Processamento de Linguagem Natural 🗣️
+            *Sistemas Operacionais 🖥️
+            *Teoria da Computação 📏
 📌 Descrição: O dataset Cora contém artigos acadêmicos classificados em 7 categorias diferentes. Os nós representam artigos, e as arestas representam citações entre os artigos.
 
 2️⃣ Citeseer
