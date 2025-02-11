@@ -11,30 +11,32 @@ Os atributos dos nós representam informações sobre os artigos (exemplo: palav
 As classes representam a categoria temática do artigo.
 
 1️⃣ Cora\
-📊 Nós: 2.708\ 
+📊 Nós: 2.708\
 🔗 Arestas: 5.429\
 🔤 Atributos por nó: 1.433\
-🎯 Classes: 7\ 
-            *Redes Neurais 🧠
-            *Aprendizado de Máquina 🤖
-            *Recuperação de Informação 🔎
-            *Visão Computacional 👁️
-            *Processamento de Linguagem Natural 🗣️
-            *Sistemas Operacionais 🖥️
-            *Teoria da Computação 📏
+🎯 Classes: 7
+
+           1. Redes Neurais 🧠\
+           2. Aprendizado de Máquina 🤖\
+           3. Recuperação de Informação 🔎\
+           4. Visão Computacional 👁️\
+           5. Processamento de Linguagem Natural 🗣️\
+           6. Sistemas Operacionais 🖥️\
+           7. Teoria da Computação 📏\
 📌 Descrição: O dataset Cora contém artigos acadêmicos classificados em 7 categorias diferentes. Os nós representam artigos, e as arestas representam citações entre os artigos.
 
-2️⃣ Citeseer
-📊 Nós: 3.327
-🔗 Arestas: 4.732
-🔤 Atributos por nó: 3.703
-🎯 Classes: 6 (categorias de pesquisa, como IA, Banco de Dados, etc.)
-            Agentes 🤖
-            Aprendizado de Máquina 📊
-            Redes Neurais 🧠
-            Banco de Dados 💾
-            Sistemas Operacionais 🖥️
-            Teoria 📏
+2️⃣ Citeseer\
+📊 Nós: 3.327\
+🔗 Arestas: 4.732\
+🔤 Atributos por nó: 3.703\
+🎯 Classes: 6 (categorias de pesquisa, como IA, Banco de Dados, etc.)\
+
+            1. Agentes 🤖
+            2. Aprendizado de Máquina 📊
+            3. Redes Neurais 🧠
+            4. Banco de Dados 💾
+            5. Sistemas Operacionais 🖥️
+            6. Teoria 📏
 📌 Descrição: O Citeseer é um dataset mais difícil do que o Cora porque tem menos conexões por nó e um maior número de atributos. Também representa um grafo de citações acadêmicas.
 
 3️⃣ PubMed
